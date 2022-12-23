@@ -1,0 +1,20 @@
+.ul-main-center {
+    text-align: center !important;
+}
+.ul-main-margin-bottom {
+    margin-bottom: 5rem !important;
+
+    
+    @include respond(tab-port){
+        margin-bottom: 2rem;
+    }
+    @include respond(phone){
+        margin-bottom: 1rem;
+    }
+}
+.ul-margin-bottom-small {
+    margin-bottom: 1.5rem !important;
+}
+.ul-margin-bottom-large {
+    margin-bottom: 8rem;
+}

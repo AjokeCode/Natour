@@ -1,0 +1,145 @@
+.btn {
+    &,
+    &:link
+&:visited  {
+    text-transform: uppercase;
+    border: none;
+ 
+}
+&--white {
+    background-color: $color-grey-light;
+    color: $color-grey-dark;
+    font-size: $default-size;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    position: relative;
+
+    @include respond(tab-port){
+        padding: 1.4rem 2.5rem;
+    }
+
+
+    @include respond(phone){
+        left: 0;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+    
+}
+
+
+&:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem (#000 0.2) ;
+}
+&:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem (#000 0.2) ;
+    
+}
+&::after {
+    background-color: $color-grey-light;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    z-index: -1;
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+
+}
+&:hover::after {
+    transform: scaleX(1.4);
+    opacity: 0;
+
+}
+&--animate {
+    animation: moves-up 2s ease-in;
+}
+
+}
+
+.btn-text  {
+&:link,
+&:visited
+ {
+    color: $color-primary;
+    text-decoration: none;
+    display: inline-block;
+    font-size: $default-size;
+    font-weight: 500;
+    border-bottom: 1px solid $color-primary;
+    margin-left: 12rem;
+    transition: all .2s;
+     }
+     
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 2px;
+
+        transform: translateY(-2px);
+        box-shadow: 0 1px 2px rgba($color-black, 0.15);
+
+    }
+    &:active {
+        
+        transform: translateY(0);
+        box-shadow: 0 0.5px 1px rgba($color-black, 0.15);
+    }
+    
+}
+.btn--green {
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: $default-size;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        display: inline-block;
+        margin-top: 2rem;
+        border-radius: 2rem;
+        position: relative;
+        left: 1rem;
+        border: none;
+
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+        
+        &::after {
+            background-color: $color-primary;
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 2rem;
+            z-index: -1;
+            transition: all 1s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        
+        }
+        &:hover::after {
+            transform: scaleX(1.4);
+            opacity: 0;
+        
+        }
+    
+}
+
+
+
+
+
+    
+    
+
